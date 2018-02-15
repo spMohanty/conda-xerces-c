@@ -5,6 +5,7 @@ if [ `uname` == Darwin ]; then
     export CXX=clang++
 fi
 
-./configure --prefix=$PREFIX
+./configure --prefix=$PREFIX CFLAGS="-arch x86_64" CXXFLAGS="-arch x86_64"
+
 make
 make install
